@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyFlow | Smart Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1>StudyFlow</h1>
+            <p>Plan smarter. Learn better.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="welcome">
+            <h2>Your personal study dashboard</h2>
+            <p>Organize your learning tasks and track your progress.</p>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <h3 id="totalTasks">0</h3>
+                <p>Total Tasks</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="completedTasks">0</h3>
+                <p>Completed</p>
+            </div>
+            <div class="stat-card">
+                <h3 id="pendingTasks">0</h3>
+                <p>Pending</p>
+            </div>
+        </section>
+
+        <section class="progress-section">
+            <h3>Overall Progress</h3>
+            <div class="progress-track">
+                <div id="progressBar"></div>
+            </div>
+            <p id="progressText">0% completed</p>
+        </section>
+
+        <section class="task-form">
+            <h2>Add a Study Task</h2>
+            <form id="taskForm">
+                <input id="taskTitle" type="text"
+                    placeholder="Enter task name" required>
+
+                <input id="subject" type="text"
+                    placeholder="Subject" required>
+
+                <input id="dueDate" type="date" required>
+
+                <select id="priority">
+                    <option value="Low">Low Priority</option>
+                    <option value="Medium" selected>Medium Priority</option>
+                    <option value="High">High Priority</option>
+                </select>
+
+                <button type="submit">Add Task</button>
+            </form>
+        </section>
+
+        <section class="filters">
+            <input id="searchInput" type="text"
+                placeholder="Search tasks...">
+
+            <select id="statusFilter">
+                <option value="All">All Tasks</option>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+            </select>
+
+            <select id="subjectFilter">
+                <option value="All">All Subjects</option>
+            </select>
+        </section>
+
+        <section>
+            <h2>Your Study Tasks</h2>
+            <div id="taskList" class="task-list"></div>
+            <p id="emptyMessage">No tasks found. Add your first study task!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>StudyFlow – A student productivity prototype</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
